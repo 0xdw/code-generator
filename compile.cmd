@@ -1,0 +1,1 @@
+cmd /c g++ -g -std=c++11 -o generate generator.cc
