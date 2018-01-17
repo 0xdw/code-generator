@@ -11,25 +11,29 @@ std::string toUpperCase(std::string str) {
 int main(int argc, char* argv[]) {
     try {
         std::string type = argv[1];
-        std::string name = argv[2];
-        std::string class_name = argv[3];
-
+        
         std::ofstream source_file;
         std::ofstream header_code;
 
-        source_file.open (name + ".cc");
         if (type == "init") {
+            source_file.open("main.cc");
             source_file << "#include <iostream>\n\n";
             source_file << "int main(int argc, char* argv[]) {\n";
             source_file << "    std::cout << \"Hello world\" << std::endl;\n";
-            source_file << "    return 0;";
+            source_file << "    return 0;\n";
             source_file << "}";
             source_file.close();
             return 0;
         }
         
         if (type == "generate") {
-            header_code.open (name + ".h");
+
+            std::string name = argv[2];
+            
+            std::string class_name = argv[3];
+
+            source_file.open(name + ".cc");
+            header_code.open(name + ".h");
 
             source_file << "#include \"" + name + ".h\"\n\n";
             source_file << "" + class_name + "::" + class_name + "() { }\n";
