@@ -7,12 +7,12 @@ BEGIN
   BEGIN
     BLOCK "080904E4"
     BEGIN
-      VALUE "CompanyName", "Private"
+      VALUE "CompanyName", "Private (Dinindu D. Wanniarachchi)"
       VALUE "FileDescription", "Generating c++ source file and the header file by given arguments."
       VALUE "FileVersion", "1.0"
       VALUE "InternalName", "Code Generator"
       VALUE "LegalCopyright", "Dinindu D. Wanniarachchi"
-      VALUE "OriginalFilename", "generate.exe"
+      VALUE "OriginalFilename", "generator.exe"
       VALUE "ProductName", "Code Generator"
       VALUE "ProductVersion", "1.0"
     END
